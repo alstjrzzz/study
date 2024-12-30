@@ -102,20 +102,22 @@
 ## 코드블럭
 
 ```
-\`\`\`
+```
 code block
-\`\`\`
+```
 
-\`\`\`java
+
+```java
 public static void main(String[] args) {
   System.out.println("");
 }
-\`\`\`
+```
 ```
 
 ```
 code block
 ```
+
 
 ```java
 public static void main(String[] args) {
