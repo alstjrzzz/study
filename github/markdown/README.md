@@ -102,7 +102,6 @@
 ## 코드블럭
 
 ```
-```
 code block
 ```
 
@@ -111,7 +110,6 @@ code block
 public static void main(String[] args) {
   System.out.println("");
 }
-```
 ```
 
 ```
