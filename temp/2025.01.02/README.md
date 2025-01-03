@@ -102,3 +102,6 @@ lombok의 @Data: getter, setter, 생성자 등등 자동 생성
 
 mybatis에서 @Mapper로 MapperInterface 만들고 mapper.xml에 sql작성
 
+
+
+로그인하면 그 유저의 닉네임과 todos를 보내야할건데...
