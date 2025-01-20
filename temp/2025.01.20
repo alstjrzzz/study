@@ -24,15 +24,15 @@ Domain Driven Design 공부하기
 
 Domain은 우리가 구현해야하는 목표, db에 저장되는 객체라고 생각해도 되지만 1대1 매칭되지는 않음
 
-데브옵스: 운영과 개발 사이에서 조율 dev ops, ml ops
+데브옵스: 운영과 개발 사이에서 조율 dev ops, 자매품 ml ops
 
-ai쪽은 대학원 필수는 아니고 아이디어가 중요하다
+ai쪽 취업은 대학원 필수는 아니고 아이디어가 중요하다
 
-postman: json 통신 테스트
+postman: json 통신 테스트위해서,,
 
 docker: 배포할 때 별별거 다 까는거 이거만 깔면 알아서 다해줌
 
-배포: 서버를 돌리는 거임 ㅋ
+배포: 서버 돌리는 거임 ㅋ
 
 local에서 돌리는 것도 배포라고 할 수도 있지만 할 수 없음 ㅋ
 보통 배포파일(jar) 만들어서 배포함
@@ -58,4 +58,8 @@ domain driven design 도메인 주도 설계
 ---
 
 jwt는 엄준식
+
+application.yml에서 secret key, issuer 등 관리, @ConfigurationProperties("jwt")로 매
+
+ㄴ 깃허브 올릴때 yml빼고 올려서 보안 베리굿 하려고 그러는거인가?
 
