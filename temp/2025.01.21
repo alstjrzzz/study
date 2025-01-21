@@ -11,3 +11,24 @@ jpa를 사용하면 interface AccountRepository extends JpaRepository해서 자�
 그럼 나는 그냥 repository 클래스에 mapper 넣어서 써야겠다 ㅋ
 
 배고프다
+
+---
+
+어째서 포스트맨 401 에러가 뜰까 ㅅㅂ
+
+spring security 때문이라는데 이거 의존성만 추가해도 알아서 시키지도 않은 짓을 해버린다고?
+
+SecurityConfig 클래스를 만들고 SecurityFilterChain을 작성....
+
+csrf는 또 뭐야
+
+음 나무위키 읽어봐도 모르겠는데 나중에 다시 읽기로 하고~
+
+일단 REST api 사용환경에서는 공격 가능성 낮으니까 보통 비활성화 스근하게 한다네요~
+
+아니 RuntimeException()에서 인텔리제이는 어떻게 알고 쓸 내용 추천해주는거야 이거 몰카인가
+
+지금 완전 감잡음 ㄹㅇㅋㅋ
+
+근데 졸리니까 코테나 풀고 잘란다
+
