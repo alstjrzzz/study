@@ -1,0 +1,13 @@
+class AccountMybatisRepository implements AccountRepository
+
+interface AccountRepository
+
+왜 이렇게 나눈걸까
+
+jpa를 사용하면 interface AccountRepository extends JpaRepository해서 자동으로 짜주는데
+
+지금은 jpa안쓰고 mybatis 쓰니까 구현클래스에서 mapper의 기능을 넣어둔거군!
+
+그럼 나는 그냥 repository 클래스에 mapper 넣어서 써야겠다 ㅋ
+
+배고프다
