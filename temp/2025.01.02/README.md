@@ -26,8 +26,8 @@ spring boot, rest api, mybatis, 배고파
 
 |메서드|목적|
 |:---:|:---:|
-|POST|조회|
-|GET|생성|
+|POST|생성|
+|GET|조회|
 |PUT|전체 수정|
 |PATCH|일부 수정|
 |DELETE|삭제|
