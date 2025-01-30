@@ -1,0 +1,27 @@
+어째서 TodoResponseDTO로 List<Todo> 보냈는데 왜
+{
+    "todoList": []
+}
+가 뜨지
+
+가능성
+1. db에 저장이 안됐다
+  -> signup 하고 login은 잘되는데 todo만 안되는건 sql을 잘못 작성?
+2. db에서 가져오는게 잘못됐다
+  -> 
+3. dto 반환이 잘못됐다
+  -> 이건 아님
+
+  아 ㅅㅂ
+  CREATE TABLE todos(
+    todo_id INT NOT NULL,
+    user_id VARCHAR(20) NOT NULL,
+    title VARCHAR(20) NOT NULL,
+    description VARCHAR(100) NOT NULL,
+    completed TINYINT NOT NULL,
+    created_at DATETIME NOT NULL
+) 여기 ; 안붙였네 ㅅ발
+
+이거 수정했는데도 왜 안되는거지
+
+하 왜 안되냐고
