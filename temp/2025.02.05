@@ -35,3 +35,29 @@ delete todo를 구현할건데 어떤 todo를 삭제하는지 구별을 뭐로 �
 
 일단 밥
 
+updateTodo에서 ResponseEntity<Todo>랑 ResponseEntity<DTO> 중에 뭐가 낫나 흠
+간단한 플젝이면 걍 Todo 바로 보내라
+보안, 유지보수 필요하면 DTO로 보내라
+
+아니 DTO로 하니까 안되고 Todo로 하니까 되는데?
+-> DTO(Todo 클래스를 필드로 가지는 클래스)는 내부의 Todo 매핑 x
+
+domain 패키지의 Todo는 내부 로직에서만 사용하고
+매개변수와 리턴은 DTO로만 해야함
+DTO의 변수는 Todo 자체 말고 Todo와 같은 필드 사용
+내부에서는 Todo.builder()로 스껄하기
+
+
+이제 프론트 만들어보자
+
+일단 todos를 get으로 가져오는데, 원래는 jwt에 userId를 넣어서 보내서 따로 body없이 가능했음
+근데 jwt안쓰니까 body로 userId를 보내야해서 post로 바꿔야됨
+근데 post가 2개니까 엔드포인트를 /todo에서 /todo/get으로 변경
+
+
+수정 버튼 작동 안하는데
+일단 집가자
+
+
+
+
