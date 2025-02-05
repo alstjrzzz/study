@@ -1,0 +1,37 @@
+auth repository의 login에서 null pointerexception 나니까 return type을 String -> Optional로
+
+todo가 안가져와지는거 고쳤는데 왜 고쳐진지 모르겠다.
+TodoController의 getTodos()를
+getTodos(@RequestBody String userId)에서
+getTodos(@RequestBody 뭐시기DTO ㅝ시기DTO)로 바꿨는데 됨
+왜지
+
+아
+{  "userId": "1234"  }
+이 json을 @RequestBody String userId로 받으면 userId = "{\"userId\":\"1234\"}"이렇게 들어옴
+DTO로 바꾸니까 된 이유는 Spring의 jackson 라이브러리가 json을 자동으로 객체로 변환해줌
+스프링을 찬양할 수 밖에 없어
+
+
+todo를 조회하는 간단한 동작도 controller - service - repository - db 이렇게 거쳐서 가야하는데,
+그럼 간단한 로직을 어디에 구현하는게 좋을까
+-> 비즈니스 로직은 Service
+-> 근데 필터링 같은게 필요한 경우에, 간단한거면 Service에서, 복잡한거면 Repository에서.. db에서 필터링하는게 성능이 더 굿
+
+
+controller에서 service에 dto를 통째로 넘겨도 되나?
+-> service가 dto를 거의 그대로 사용할 경우엔 ㄱㅊ
+-> 보통은 service가 dto에 의존하지 않도록 설계함
+-> 음 그럼 그냥 대충 매개변수 많아질때만 dto로 땜빵하는거네
+
+
+delete todo를 구현할건데 어떤 todo를 삭제하는지 구별을 뭐로 할까나
+-> todo_id로 하자
+
+여러개 한번에 지울 수 있도록 dto 필드를 int가 아니라 List<Integer>로 하자
+
+사용자가 todo_id와 user_id를 악의적으로 변경하면 어떻게 해야하나
+-> @AuthenticationPrincipal로 지금 로그인 중인 userId를 알아내서 이러쿵 저러쿵 하면 되는데 spring security 지금 혐그때문에 유기해서 못 씀
+
+일단 밥
+
