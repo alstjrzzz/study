@@ -2,4 +2,6 @@ Queue 구현체는 LinkedList와 ArrayDeque 중에서 어느게 좋을까?
 
 LinkedList 구현체는 불필요한 노드 객체로 인해 메모리 효율적이지 않음
 
-
+커서 기반 페이징 구현 중
+responseDTO에 Builder 어노테이션을 달아놨음
+get을 쓴 적이 없는데 getter를 추가해야 200 ok가 뜨는 이유?
