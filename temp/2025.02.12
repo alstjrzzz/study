@@ -1,0 +1,5 @@
+Queue 구현체는 LinkedList와 ArrayDeque 중에서 어느게 좋을까?
+
+LinkedList 구현체는 불필요한 노드 객체로 인해 메모리 효율적이지 않음
+
+
