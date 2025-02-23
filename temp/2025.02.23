@@ -1,0 +1,35 @@
+dao, dto, vo
+
+dao(data access object)
+데이터베이스에 접근하는 객체(repository, mapper 등등)
+
+dto(data transfer object)
+데이터 전송을 위한 객체, getter setter 있, 로직없음
+
+vo(value object)
+값 그 자체가 의미가 있는 객체, like 상수, getter 로직 있, setter 없음(생성 후 값 변경 불가)
+예를 들어 비밀번호, 주소 등등
+
+
+싱글톤기법과 bean
+bean으로 등록된 하나의 객체만 사용해서 대충 리소스를 줄이는게 싱글톤 기법일거고, 동시성문제에 대해 알아봐야 함
+controller, service, repository등 어노테이션도 bean으로 등록하는거고 mvc라고 명시하는거임
+
+component랑 bean의 차이는?
+bean은 메서드를 직접 등록하는거고 component는 어노테이션으로 자동 등록이라는데 흠
+
+IoC란?
+inversion of control, 제어의 역전
+
+DI란?
+dependency injection
+
+OCP란?
+open-closed priciple, 개방-폐쇄 원칙
+확장에는 열려있고 수정·변경에는 닫혀있음
+예시) 추후 db변경을 위해 repository 인터페이스로 기능을 명시한 후 구현체 작성
+
+AOP란?
+aspect oriented programming, 관점지향프로그래밍
+흠 어렵군
+
